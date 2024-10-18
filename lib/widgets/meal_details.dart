@@ -20,7 +20,7 @@ class MealDetails extends ConsumerWidget {
         actions: [
           IconButton(
             onPressed: () {
-              ref
+              final bool wasAdded = ref
                   .read(
                     favoriteMealsProvider.notifier,
                   )
@@ -29,12 +29,12 @@ class MealDetails extends ConsumerWidget {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text(
-                    message,
+                    wasAdded ? 'Meal added as a favorite' : 'Meal is removed',
                   ),
                 ),
               );
             },
-            icon: Icon(Icons.star),
+            icon: const Icon(Icons.star),
           )
         ],
       ),
@@ -47,7 +47,7 @@ class MealDetails extends ConsumerWidget {
               width: double.infinity,
               fit: BoxFit.cover,
             ),
-            SizedBox(
+            const SizedBox(
               height: 14,
             ),
             Text(
@@ -56,7 +56,7 @@ class MealDetails extends ConsumerWidget {
                     color: Theme.of(context).colorScheme.primary,
                   ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 14,
             ),
             for (final ingriedient in meal.ingredients)
@@ -66,7 +66,7 @@ class MealDetails extends ConsumerWidget {
                     color: Theme.of(context).colorScheme.primary,
                     fontWeight: FontWeight.bold),
               ),
-            SizedBox(
+            const SizedBox(
               height: 24,
             ),
             Text(

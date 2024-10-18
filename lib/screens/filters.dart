@@ -29,7 +29,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Your filters'),
+        title: const Text('Your filters'),
       ),
       // drawer: MainDrawer(
       //   onselectScreen: (identifier) {
@@ -64,17 +64,17 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 });
               },
               activeColor: Theme.of(context).colorScheme.tertiary,
-              contentPadding: EdgeInsets.only(
+              contentPadding: const EdgeInsets.only(
                 left: 34,
                 right: 22,
               ),
-              subtitle: Text(
+              subtitle: const Text(
                 'Only include gluter-free meals',
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
-              title: Text(
+              title: const Text(
                 'Gluter free',
                 style: TextStyle(
                   color: Colors.white,
@@ -89,17 +89,17 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 });
               },
               activeColor: Theme.of(context).colorScheme.tertiary,
-              contentPadding: EdgeInsets.only(
+              contentPadding: const EdgeInsets.only(
                 left: 34,
                 right: 22,
               ),
-              subtitle: Text(
+              subtitle: const Text(
                 'Only include lactose-free meals',
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
-              title: Text(
+              title: const Text(
                 'Lactose-free',
                 style: TextStyle(
                   color: Colors.white,
@@ -114,17 +114,17 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 });
               },
               activeColor: Theme.of(context).colorScheme.tertiary,
-              contentPadding: EdgeInsets.only(
+              contentPadding: const EdgeInsets.only(
                 left: 34,
                 right: 22,
               ),
-              subtitle: Text(
+              subtitle: const Text(
                 'Only include vegetarian meals',
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
-              title: Text(
+              title: const Text(
                 'Vegetarian',
                 style: TextStyle(
                   color: Colors.white,
@@ -139,17 +139,17 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 });
               },
               activeColor: Theme.of(context).colorScheme.tertiary,
-              contentPadding: EdgeInsets.only(
+              contentPadding: const EdgeInsets.only(
                 left: 34,
                 right: 22,
               ),
-              subtitle: Text(
+              subtitle: const Text(
                 'Only include vegan meals',
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
-              title: Text(
+              title: const Text(
                 'vegan',
                 style: TextStyle(
                   color: Colors.white,

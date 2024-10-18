@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mealapp/models/category.dart';
-import 'package:mealapp/screens/categories.dart';
 
 class CategoryGridItem extends StatelessWidget {
   const CategoryGridItem(
@@ -28,7 +27,7 @@ class CategoryGridItem extends StatelessWidget {
         ),
         child: Text(
           category.title,
-          style: TextStyle(color: Colors.white, fontSize: 21),
+          style: const TextStyle(color: Colors.white, fontSize: 21),
         ),
       ),
     );
