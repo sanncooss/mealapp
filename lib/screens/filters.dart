@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mealapp/providers/filters_provider.dart';
 
 class FiltersScreen extends ConsumerStatefulWidget {
-  const FiltersScreen({super.key, required Map<Filter, bool> currentFilters});
+  const FiltersScreen({super.key});
 
   @override
   ConsumerState<FiltersScreen> createState() => _FiltersScreenState();
@@ -46,13 +46,13 @@ class _FiltersScreenState extends ConsumerState<FiltersScreen> {
       body: PopScope(
         canPop: false,
         onPopInvoked: (bool didPop) {
-          if (didPop) return;
-          Navigator.of(context).pop({
+          ref.read(filtersProvider.notifier).setFilters({
             Filter.glutenFree: _gluterFree,
             Filter.lactoseFree: _lactoseFreeFilterSet,
             Filter.vegetarian: _vegetarianFilter,
-            Filter.vegan: _veganFilter,
+            Filter.vegan: _veganFilter
           });
+          if (didPop) return;
         },
         child: Column(
           children: [

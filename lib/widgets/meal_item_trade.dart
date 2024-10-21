@@ -14,7 +14,7 @@ class MealItemTrade extends StatelessWidget {
         ),
         Text(
           label,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
           ),
         ),

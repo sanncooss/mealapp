@@ -11,7 +11,7 @@ class MainDrawer extends StatelessWidget {
       child: Column(
         children: [
           DrawerHeader(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
@@ -32,7 +32,7 @@ class MainDrawer extends StatelessWidget {
                   size: 48,
                   color: Theme.of(context).colorScheme.primary,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 18,
                 ),
                 Text(
@@ -48,7 +48,7 @@ class MainDrawer extends StatelessWidget {
             onTap: () {
               onselectScreen('meals');
             },
-            leading: Icon(
+            leading: const Icon(
               Icons.restaurant,
               size: 26,
               color: Colors.white,
@@ -65,7 +65,7 @@ class MainDrawer extends StatelessWidget {
             onTap: () {
               onselectScreen('filters');
             },
-            leading: Icon(Icons.settings, size: 26, color: Colors.white),
+            leading: const Icon(Icons.settings, size: 26, color: Colors.white),
             title: Text(
               'Filters',
               style: Theme.of(context)
